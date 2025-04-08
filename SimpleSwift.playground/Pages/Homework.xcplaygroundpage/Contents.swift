@@ -76,7 +76,14 @@ func calculate(_ args: [String]) -> Int {
 }
 
 func calculate(_ arg: String) -> Int {
-    return -1
+    let split = arg.split(separator: " ")
+    var result: [String] = []
+    
+    for word in split{
+        result.append(String(word))
+    }
+                
+    return calculate(result)
 }
 
 //: Below this are the test expressions/calls to verify if your code is correct.
